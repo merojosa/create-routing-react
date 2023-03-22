@@ -5,18 +5,26 @@ import { promisify } from "util";
 const copy = promisify(ncp);
 
 async function copyTemplateFiles(targetDirectory) {
-  console.log("BREAKPOINT import.meta.url", import.meta.url);
+  const getProjectDir = () => {
+    const currentFileUrl = import.meta.url;
 
-  console.log(
-    "BREAKPOINT new URL(import.meta.url).pathname",
-    new URL(import.meta.url).pathname
-  );
-  const projectDir = path.resolve(
-    new URL(import.meta.url).pathname,
-    "../../project-skeleton"
-  );
+    // On Windows, for some reason path.resolve adds an extra "C:\"
+    if (process.platform === "win32") {
+      return path.resolve(
+        new URL(currentFileUrl).pathname.substring(
+          new URL(currentFileUrl).pathname.indexOf("/") + 1
+        ),
+        "../../project-squeleton"
+      );
+    }
 
-  console.log("BREAKPOINT projectDir", projectDir);
+    return path.resolve(
+      new URL(import.meta.url).pathname,
+      "../../project-skeleton"
+    );
+  };
+
+  const projectDir = getProjectDir();
 
   return copy(projectDir, targetDirectory, {
     clobber: false,
