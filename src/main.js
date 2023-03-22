@@ -5,7 +5,11 @@ import { promisify } from "util";
 const copy = promisify(ncp);
 
 async function copyTemplateFiles(targetDirectory) {
-  const projectDir = path.join(__dirname, "../project-skeleton");
+  const projectDir = path.resolve(
+    new URL(import.meta.url).pathname,
+    "../../project-skeleton"
+  );
+
   return copy(projectDir, targetDirectory, {
     clobber: false,
   }).catch((error) => console.error(error));
