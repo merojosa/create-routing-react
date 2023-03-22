@@ -1,0 +1,31 @@
+{
+  "name": "@jose-andres/create-routing-react",
+  "version": "1.0.0",
+  "description": "A CLI to create a Vite's React project with routing using react-router-dom",
+  "main": "src/index.js",
+  "bin": {
+    "@jose-andres/create-routing-react": "bin/create-routing-react",
+    "create-routing-react": "bin/create-routing-react"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "create-routing-react"
+  ],
+  "author": "Jose Andrés Mejías",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "ncp": "^2.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "project-squeleton/"
+  ]
+}
