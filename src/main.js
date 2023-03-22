@@ -5,15 +5,14 @@ import { promisify } from "util";
 const copy = promisify(ncp);
 
 async function copyTemplateFiles(targetDirectory) {
-  const templateDir = "project-skeleton";
-
-  return copy(templateDir, targetDirectory, {
+  const projectDir = path.join(__dirname, "../project-skeleton");
+  return copy(projectDir, targetDirectory, {
     clobber: false,
   }).catch((error) => console.error(error));
 }
 
 export async function createProject(targetDirectory) {
-  console.log("Copy project files");
+  console.log("Generating project...");
   await copyTemplateFiles(targetDirectory);
 
   console.log("Project ready");
