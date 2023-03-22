@@ -4,7 +4,7 @@ import { promisify } from "util";
 
 const copy = promisify(ncp);
 
-async function copyTemplateFiles(targetDirectory) {
+async function copyTemplateFiles(targetDirectory: string) {
   const getProjectDir = () => {
     const currentFileUrl = import.meta.url;
 
@@ -32,10 +32,9 @@ async function copyTemplateFiles(targetDirectory) {
   }).catch((error) => console.error(error));
 }
 
-export async function createProject(targetDirectory) {
+export async function createProject(targetDirectory: string) {
   console.log("Generating project...");
   await copyTemplateFiles(targetDirectory);
-
   console.log("Project ready");
   return true;
 }

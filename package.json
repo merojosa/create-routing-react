@@ -1,31 +1,42 @@
 {
   "name": "@jose-andres/create-routing-react",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A CLI to create a Vite's React project with routing using react-router-dom",
-  "main": "src/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "type": "module",
   "bin": {
-    "@jose-andres/create-routing-react": "bin/create-routing-react",
-    "create-routing-react": "bin/create-routing-react"
+    "@jose-andres/create-routing-react": "dist/index.js",
+    "create-routing-react": "dist/index.js"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup src/index.ts --format esm --clean --minify",
+    "release": "pnpm run build && changeset publish",
+    "lint": "tsc"
   },
   "keywords": [
     "cli",
-    "create-routing-react"
+    "create-routing-react",
+    "react"
   ],
   "author": "Jose Andrés Mejías",
   "license": "MIT",
+  "files": [
+    "src/",
+    "project-skeleton/"
+  ],
   "dependencies": {
+    "@changesets/cli": "^2.26.1",
     "esm": "^3.2.25",
     "ncp": "^2.0.0"
   },
-  "files": [
-    "bin/",
-    "src/",
-    "project-skeleton/"
-  ]
+  "devDependencies": {
+    "@types/ncp": "^2.0.5",
+    "@types/node": "^18.15.5",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2"
+  }
 }
