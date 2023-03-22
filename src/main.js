@@ -8,13 +8,14 @@ async function copyTemplateFiles(targetDirectory) {
   const getProjectDir = () => {
     const currentFileUrl = import.meta.url;
 
-    // On Windows, for some reason path.resolve adds an extra "C:\"
+    // On Windows for some reason new URL(currentFileUrl).pathname
+    // adds a double "C:\" when path.resolve is used.
     if (process.platform === "win32") {
       return path.resolve(
         new URL(currentFileUrl).pathname.substring(
           new URL(currentFileUrl).pathname.indexOf("/") + 1
         ),
-        "../../project-squeleton"
+        "../../project-skeleton"
       );
     }
 

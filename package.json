@@ -1,6 +1,6 @@
 {
   "name": "@jose-andres/create-routing-react",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A CLI to create a Vite's React project with routing using react-router-dom",
   "main": "src/index.js",
   "bin": {
