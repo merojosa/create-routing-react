@@ -1,6 +1,6 @@
 {
   "name": "@jose-andres/create-routing-react",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "A CLI to create a Vite's React project with routing using react-router-dom",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -16,10 +16,7 @@
     "tsup": "^6.7.0",
     "typescript": "^5.0.2"
   },
-  "bin": {
-    "@jose-andres/create-routing-react": "dist/index.js",
-    "create-routing-react": "dist/index.js"
-  },
+  "bin": "dist/index.js",
   "scripts": {
     "build": "tsup src/index.ts --format esm --clean --minify",
     "release": "pnpm run build && changeset publish",
