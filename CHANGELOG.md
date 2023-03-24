@@ -1,5 +1,11 @@
 # @jose-andres/create-routing-react
 
+## 1.2.0
+
+### Minor Changes
+
+- 8567d27: Improve layout
+
 ## 1.1.0
 
 ### Minor Changes
