@@ -36,10 +36,6 @@
   ],
   "author": "Jose Andrés Mejías",
   "license": "MIT",
-  "files": [
-    "src/",
-    "project-skeleton/"
-  ],
   "homepage": "https://github.com/merojosa/create-routing-react#readme",
   "repository": {
     "type": "git",

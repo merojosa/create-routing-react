@@ -1,3 +1,7 @@
-node_modules/
-project-skeleton/node_modules
+**/*
+!src/**/*
+!project-skeleton/**/*
+
+node_modules
 project-skeleton/pnpm-lock.yaml
+project-skeleton/node_modules
