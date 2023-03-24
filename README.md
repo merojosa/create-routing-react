@@ -1,4 +1,4 @@
-# CLI to create
+# CLI to create a Vite's React app with routing
 
 Execute the following command:
 

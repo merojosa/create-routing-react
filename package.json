@@ -17,6 +17,10 @@
     "release": "pnpm run build && changeset publish",
     "lint": "tsc"
   },
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  },
   "keywords": [
     "cli",
     "create-routing-react",
