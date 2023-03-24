@@ -10,7 +10,7 @@ export const applicationRoutes = {
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: applicationRoutes.HOME,
     element: <Root />,
     children: [
       {

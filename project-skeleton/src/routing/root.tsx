@@ -8,7 +8,9 @@ function Root() {
     <>
       <header>
         <nav>
-          <img className="logo" src="/vite.svg" alt="Vite Logo" />
+          <Link className="logo" to={applicationRoutes.HOME}>
+            <img src="/vite.svg" alt="Vite Logo" />
+          </Link>
           <ul>
             <li>
               <Link to={applicationRoutes.HOME}>Home</Link>
@@ -22,6 +24,7 @@ function Root() {
       <main>
         <Outlet />
       </main>
+      <footer>Footer Example Text</footer>
     </>
   );
 }

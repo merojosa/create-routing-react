@@ -1,5 +1,6 @@
 :root {
   --primary-color: #00519e;
+  --secondary-color: #bcbcbc;
   --body-margin: 1rem;
 }
 
@@ -8,20 +9,26 @@ body {
 }
 
 body > #root {
-  min-height: 100vh;
+  all: unset;
+  min-height: 800px;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
+  grid-template-areas: "header" "main" "footer";
+  background-color: white;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+body > #root > * {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header {
   grid-area: header;
-  position: sticky;
-  top: 0;
+  width: 100vw;
 }
 
 header > nav {
@@ -52,17 +59,19 @@ header > nav > ul {
 
 main {
   grid-area: main;
-  padding: 24px;
-  /* overflow: auto; */ /* Mantener header y footer sticky */
+  width: 75rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 footer {
-  background: blanchedalmond;
-  height: 64px;
+  grid-area: footer;
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-area: footer;
+  width: 100vw;
+  height: 64px;
+  background: var(--secondary-color);
 }
 
 h1 {
@@ -70,7 +79,6 @@ h1 {
 }
 
 img.logo {
-  width: 60px;
   height: 80%;
 }
 
