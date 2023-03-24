@@ -1,16 +1,24 @@
 {
   "name": "@jose-andres/create-routing-react",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "A CLI to create a Vite's React project with routing using react-router-dom",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "type": "module",
+  "dependencies": {
+    "@changesets/cli": "^2.26.1",
+    "esm": "^3.2.25",
+    "ncp": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/ncp": "^2.0.5",
+    "@types/node": "^18.15.5",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2"
+  },
   "bin": {
     "@jose-andres/create-routing-react": "dist/index.js",
     "create-routing-react": "dist/index.js"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm --clean --minify",
@@ -20,6 +28,9 @@
   "engines": {
     "npm": ">=8.0.0",
     "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "cli",
@@ -32,15 +43,12 @@
     "src/",
     "project-skeleton/"
   ],
-  "dependencies": {
-    "@changesets/cli": "^2.26.1",
-    "esm": "^3.2.25",
-    "ncp": "^2.0.0"
+  "homepage": "https://github.com/merojosa/create-routing-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merojosa/create-routing-react.git"
   },
-  "devDependencies": {
-    "@types/ncp": "^2.0.5",
-    "@types/node": "^18.15.5",
-    "tsup": "^6.7.0",
-    "typescript": "^5.0.2"
+  "bugs": {
+    "url": "https://github.com/merojosa/create-routing-react/issues"
   }
 }
