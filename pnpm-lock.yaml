@@ -4,6 +4,7 @@ specifiers:
   '@changesets/cli': ^2.26.1
   '@types/ncp': ^2.0.5
   '@types/node': ^18.15.5
+  chalk: ^5.2.0
   esm: ^3.2.25
   ncp: ^2.0.0
   tsup: ^6.7.0
@@ -11,6 +12,7 @@ specifiers:
 
 dependencies:
   '@changesets/cli': 2.26.1
+  chalk: 5.2.0
   esm: 3.2.25
   ncp: 2.0.0
 
@@ -661,6 +663,11 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+    dev: false
+
+  /chalk/5.2.0:
+    resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: false
 
   /chardet/0.7.0:

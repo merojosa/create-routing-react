@@ -1,6 +1,7 @@
 import ncp from "ncp";
 import path from "path";
 import { promisify } from "util";
+import chalk from "chalk";
 
 const copy = promisify(ncp);
 
@@ -35,6 +36,6 @@ async function copyTemplateFiles(targetDirectory: string) {
 export async function createProject(targetDirectory: string) {
   console.log("Generating project...");
   await copyTemplateFiles(targetDirectory);
-  console.log("Project ready");
+  console.log("%s Project ready", chalk.green.bold("DONE"));
   return true;
 }
