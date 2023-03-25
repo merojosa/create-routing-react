@@ -1,5 +1,11 @@
 # @jose-andres/create-routing-react
 
+## 1.2.4
+
+### Patch Changes
+
+- 810a6c0: Fix header margins
+
 ## 1.2.3
 
 ### Patch Changes
