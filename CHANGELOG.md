@@ -1,5 +1,11 @@
 # @jose-andres/create-routing-react
 
+## 1.2.3
+
+### Patch Changes
+
+- c30c996: Remove unnecesary dependencies
+
 ## 1.2.0
 
 ### Minor Changes
