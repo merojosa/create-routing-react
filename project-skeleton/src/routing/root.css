@@ -21,11 +21,6 @@ body > #root {
   overflow-x: hidden;
 }
 
-body > #root > * {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 header {
   grid-area: header;
   width: 100vw;
@@ -60,8 +55,7 @@ header > nav > ul {
 main {
   grid-area: main;
   width: 75rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
 }
 
 footer {
